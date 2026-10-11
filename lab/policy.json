@@ -1,0 +1,6 @@
+{
+  "roles": {
+    "member": ["read:own"],
+    "reviewer": ["read:own", "write:own"]
+  }
+}

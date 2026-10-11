@@ -1,0 +1,7 @@
+.local-results/
+**/.local-results/
+predictions.json
+**/predictions.json
+browser-observation.json
+**/browser-observation.json
+.DS_Store

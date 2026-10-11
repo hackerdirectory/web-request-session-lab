@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="460" viewBox="0 0 1280 460" role="img" aria-labelledby="title desc">
+<title id="title">Hacker Directory — Understand what you hack.</title>
+<desc id="desc">Hacker Directory — Understand what you hack. English and Türkçe.</desc>
+<rect width="1280" height="460" rx="20" fill="#08080d"/>
+<path d="M48 108H1232M48 366H1232" stroke="#302738"/>
+<g transform="translate(48 30) scale(.45)"><path fill="#e9e5ee" d="M0 0H30V125H0Z M38 42H73L90 60V125H65V74H38Z"/><path fill="#b08aea" d="M35 125H44L59 88H50Z"/></g>
+<text x="106" y="64" fill="#e9e5ee" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700">Hacker Directory</text>
+<text x="48" y="213" fill="#e9e5ee" font-family="Arial,Helvetica,sans-serif" font-size="76" font-weight="700" letter-spacing="-1.5">Understand</text>
+<text x="48" y="301" fill="#b08aea" font-family="Arial,Helvetica,sans-serif" font-size="76" font-weight="700" letter-spacing="-1.5">what you hack.</text>
+<g transform="translate(1000 139) scale(1.5)"><path fill="#e9e5ee" d="M0 0H30V125H0Z M38 42H73L90 60V125H65V74H38Z"/><path fill="#b08aea" d="M35 125H44L59 88H50Z"/></g>
+<text x="48" y="419" fill="#bbb3c7" font-family="Arial,Helvetica,sans-serif" font-size="20">hacker.directory</text>
+<text x="1232" y="419" text-anchor="end" fill="#b8afc5" font-family="Arial,Helvetica,sans-serif" font-size="20">English / Türkçe</text>
+</svg>

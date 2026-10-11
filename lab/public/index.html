@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Web manual lab — Hacker Directory</title><link rel="stylesheet" href="/lab.css"><script src="/lab.js" defer></script></head><body>
+<header><span class="eyebrow">Hacker Directory · Local manual practice</span><h1>Request’ten policy kararına</h1><p>Sentetik veriyi gözle. Önce tahmin et, sonra DevTools ve sanitized trace ile karşılaştır.</p><p class="note">Yalnız loopback eğitim uygulaması. Identity seçimi bir demo login’idir; password doğrulaması ve gerçek database bağlantısı içermez.</p></header>
+<main>
+<section aria-labelledby="request-heading"><div class="section-number">01 / Request journey</div><h2 id="request-heading">Kitabı browser’a getir</h2>
+<label for="book-case">Verilen senaryo</label><select id="book-case"><option value="found">Kitap bulundu · 200</option><option value="missing">Kitap bulunamadı · 404</option></select><button id="book-send">Request gönder</button>
+<label class="check"><input type="checkbox" id="hold-render" checked>Response geldikten sonra DOM update için bekle</label><button id="render" disabled>Bekleyen body’yi DOM’a yaz</button>
+<div class="result" id="book-result" aria-live="polite">Henüz request gönderilmedi.</div>
+<p>Network kaydı response’u gösterir. Buradaki ikinci düğme, <code>fetch()</code> sonucunun UI’ı kendiliğinden güncellemediğini görünür kılar.</p><ol id="book-timeline"></ol>
+</section>
+<section aria-labelledby="session-heading"><div class="section-number">02 / Session lifecycle</div><h2 id="session-heading">Cookie ve server store</h2>
+<p>Cookie değeri bu panelde gösterilmez. DevTools Application/Cookies’te kendi yerel cookie’nizi gözleyin; screenshot/export’a identifier’ı taşımayın.</p>
+<div class="controls"><button id="anonymous">Anonymous session başlat</button><label for="identity">Identity</label><select id="identity"><option value="alice">Duru · member · Atlas</option><option value="bob">Ekin · reviewer · Atlas</option></select><button id="login">Demo login / rotation</button><button id="logout">Logout</button><button id="expire">Demo clock +301 saniye</button></div>
+<p class="note">Clock sabit 2030 başlangıcından yalnız düğmeyle ilerler. Server TTL: 300 demo saniyesi. Cookie Max-Age: 900 gerçek saniye. Amaç iki farklı lifetime’ı ayırmaktır; bu bir production session tasarımı değildir.</p>
+<div id="session-summary" class="result" aria-live="polite">Server state yükleniyor.</div><details open><summary>Sanitized session store / lifecycle ledger</summary><pre id="session-ledger"></pre></details>
+</section>
+<section aria-labelledby="policy-heading"><div class="section-number">03 / Resource authorization</div><h2 id="policy-heading">Kim, hangi object’e, hangi action ile?</h2>
+<label for="resource-case">Verilen policy senaryosu</label><select id="resource-case"><option value="own">Own resource · read</option><option value="other-owner">Aynı tenant, farklı owner · read</option><option value="other-tenant">Orion tenant · read</option><option value="write-own">Own resource · write permission gözlemi</option></select><button id="policy-send">Kararı gözle</button>
+<p>Write case yalnız permission evaluator’ı çalıştırır; kayıt değiştirmez. Server actor’ü session store’dan belirler. Client role/tenant/owner alanı göndermez.</p><pre id="policy-result" aria-live="polite">Henüz karar yok.</pre>
+</section>
+<section aria-labelledby="evidence-heading"><div class="section-number">04 / Evidence</div><h2 id="evidence-heading">Server’a ait gözlem izi</h2><p><code>X-Request-ID</code>, response body ve trace aynı request’e bağlanır. In-memory lookup, gerçek SQL/driver capture değildir.</p><div class="controls"><button id="refresh">Store / trace yenile</button><button id="reset">Yalnız bu labı resetle</button><button id="theme">Light / dark</button></div><pre id="trace"></pre><p id="notice" role="status"></p></section>
+</main><footer><p>Görevler, hints ve çözüm: <code>labs/web/pilot/README.md</code>, <code>HINTS.md</code>, <code>SOLUTION.md</code>. Harici request veya hesap verisi gerekmez.</p></footer>
+</body></html>

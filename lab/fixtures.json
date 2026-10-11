@@ -1,0 +1,12 @@
+{
+  "identities": {
+    "alice": {"id": "alice", "name": "Duru", "tenant": "Atlas", "role": "member"},
+    "bob": {"id": "bob", "name": "Ekin", "tenant": "Atlas", "role": "reviewer"}
+  },
+  "books": [{"id": "book-1", "title": "Atlas Notları", "pages": 144}],
+  "resources": {
+    "alice": {"id": "report-atlas-01", "owner": "alice", "tenant": "Atlas", "title": "Duru’nun çalışma notu"},
+    "bob": {"id": "report-atlas-02", "owner": "bob", "tenant": "Atlas", "title": "Ekin’in çalışma notu"},
+    "Orion": {"id": "report-orion-01", "owner": "carol", "tenant": "Orion", "title": "Orion çalışma notu"}
+  }
+}
